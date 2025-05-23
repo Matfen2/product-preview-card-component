@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-product {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 0 0 20px;
+}
+
+.card-description {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+/* Perfume label */
+.card-description p:first-of-type {
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.card-description h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 1rem;
+}
+
+/* Description paragraph */
+.card-description p:nth-of-type(2) {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ====== PRICE ====== */
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-price p {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+
+.card-price span {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.9rem;
+}
+
+/* ====== BUTTON ====== */
+#btn-buy {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+#btn-buy:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+#btn-buy img {
+  width: 15px;
+  height: auto;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .img-product {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-description {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
